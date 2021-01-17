@@ -11,7 +11,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private int age ;
-    private int sexe ;
+    private String sexe ;
     private String preference ;
     private  int pricemin;
     private int pricemax;
@@ -20,7 +20,7 @@ public class User {
     public User() {
     }
 
-    public User(int age, int sexe, String preference, int pricemin, int pricemax, boolean handicap) {
+    public User(int age, String sexe, String preference, int pricemin, int pricemax, boolean handicap) {
         this.age = age;
         this.sexe = sexe;
         this.preference = preference;
@@ -37,11 +37,11 @@ public class User {
         this.age = age;
     }
 
-    public int getSexe() {
+    public String getSexe() {
         return sexe;
     }
 
-    public void setSexe(int sexe) {
+    public void setSexe(String sexe) {
         this.sexe = sexe;
     }
 
