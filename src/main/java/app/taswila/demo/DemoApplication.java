@@ -40,7 +40,7 @@ public class DemoApplication implements CommandLineRunner {
         AvailableTransport transport4 = new AvailableTransport("Train","19/11/2021","17:05","18:00","Kenitra","Tanger");
         AvailableTransport transport5 = new AvailableTransport("Train","21/11/2021","22:00","23:15","Casablanca","Kenitra");
 
-        //repoAvailableTransport.saveAll(Arrays.asList(transport1,transport2,transport3,transport4,transport5));
+        repoAvailableTransport.saveAll(Arrays.asList(transport1,transport2,transport3,transport4,transport5));
 
         User user = new User(20, "homme","Train", 0, 50, false);
 
