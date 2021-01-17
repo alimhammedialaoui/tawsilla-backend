@@ -1,9 +1,7 @@
 package app.taswila.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class AvailableTransport {
@@ -15,27 +13,19 @@ public class AvailableTransport {
     private String date;
     private String departureTime;
     private String arrivalTime;
-
-
-
-    public String getArrival() {
-        return arrival;
-    }
-
-    public void setArrival(String arrival) {
-        this.arrival = arrival;
-    }
-
     private String departure;
     private String arrival;
+    @ElementCollection
+    private List<String> transitTime;
 
-    public AvailableTransport(String name, String date, String departureTime, String arrivalTime, String departure, String arrival) {
+    public AvailableTransport(String name, String date, String departureTime, String arrivalTime, String departure, String arrival, List<String> transitTime) {
         this.name = name;
         this.date = date;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
         this.departure = departure;
         this.arrival = arrival;
+        this.transitTime = transitTime;
     }
 
     public AvailableTransport() {
@@ -79,5 +69,21 @@ public class AvailableTransport {
 
     public void setArrivalTime(String arrivalTime) {
         this.arrivalTime = arrivalTime;
+    }
+
+    public List<String> getTransitTime() {
+        return transitTime;
+    }
+
+    public void setTransitTime(List<String> transitTime) {
+        this.transitTime = transitTime;
+    }
+
+    public String getArrival() {
+        return arrival;
+    }
+
+    public void setArrival(String arrival) {
+        this.arrival = arrival;
     }
 }
