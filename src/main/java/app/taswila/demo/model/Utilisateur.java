@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -17,10 +17,10 @@ public class User {
     private int pricemax;
     private boolean handicap ;
 
-    public User() {
+    public Utilisateur() {
     }
 
-    public User(int age, String sexe, String preference, int pricemin, int pricemax, boolean handicap) {
+    public Utilisateur(int age, String sexe, String preference, int pricemin, int pricemax, boolean handicap) {
         this.age = age;
         this.sexe = sexe;
         this.preference = preference;

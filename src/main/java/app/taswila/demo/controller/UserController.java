@@ -1,6 +1,6 @@
 package app.taswila.demo.controller;
 
-import app.taswila.demo.model.User;
+import app.taswila.demo.model.Utilisateur;
 import app.taswila.demo.repo.RepoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +18,7 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    public User addUser(@RequestBody User user){
+    public Utilisateur addUser(@RequestBody Utilisateur user){
         return repoUser.save(user);
     }
 }

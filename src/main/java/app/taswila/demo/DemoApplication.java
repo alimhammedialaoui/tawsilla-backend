@@ -1,7 +1,7 @@
 package app.taswila.demo;
 
 import app.taswila.demo.model.AvailableTransport;
-import app.taswila.demo.model.User;
+import app.taswila.demo.model.Utilisateur;
 import app.taswila.demo.repo.RepoAvailableTransport;
 import app.taswila.demo.repo.RepoUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
@@ -42,7 +40,7 @@ public class DemoApplication implements CommandLineRunner {
 
         repoAvailableTransport.saveAll(Arrays.asList(transport1,transport2,transport3,transport4,transport5));
 
-        User user = new User(20, "homme","Train", 0, 50, false);
+        Utilisateur user = new Utilisateur(20, "homme","Train", 0, 50, false);
 
         repoUser.save(user);
     }
