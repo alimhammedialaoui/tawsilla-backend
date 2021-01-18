@@ -33,7 +33,7 @@ public class AvailableTransportImpl implements AvailableTransportService {
         List<AvailableTransport> all = repoAvailableTransport.findByNameAndDate(name,date).stream().filter(transport->(
                 traget.get(transport.getDeparture())>=traget.get(A)
                         && transport.getDeparture().equals(A)
-                        && transport.getArrival().equals(B)
+                        && traget.get(transport.getArrival())>=traget.get(B)
                 )).collect(Collectors.toList());
         DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("HH:mm");
         LocalTime searchTime = LocalTime.parse(time,formatter);
