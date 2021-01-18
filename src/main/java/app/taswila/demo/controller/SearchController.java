@@ -33,7 +33,7 @@ public class SearchController {
                         searchRequest.getPreference(),
                         searchRequest.getDate(),
                         searchRequest.getTime(),
-                        "Casablanca",
-                        "Rabat");
+                        searchRequest.getDeparture(),
+                        searchRequest.getArrival());
     }
 }
