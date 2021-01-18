@@ -7,4 +7,6 @@ import java.util.List;
 public interface AvailableTransportService {
 
     List<AvailableTransport> searchByNameInDateAfterTimeFromAToB(String name,String date,String time,String A,String B);
+
+    List<AvailableTransport> findAll();
 }

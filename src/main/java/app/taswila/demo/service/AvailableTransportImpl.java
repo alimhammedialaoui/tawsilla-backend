@@ -41,4 +41,9 @@ public class AvailableTransportImpl implements AvailableTransportService {
         return filteredList;
         // 1 --> 2 --> 3 --> 4
     }
+
+    @Override
+    public List<AvailableTransport> findAll() {
+        return repoAvailableTransport.findAll();
+    }
 }
