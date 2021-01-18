@@ -33,11 +33,11 @@ public class DemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<String> t1 = new ArrayList<>(Arrays.asList("17:30","18:00","18:30"));
-        List<String> t2 = new ArrayList<>(Arrays.asList("18:25"));
-        List<String> t3 = new ArrayList<>(Arrays.asList());
-        List<String> t4 = new ArrayList<>(Arrays.asList());
-        List<String> t5 = new ArrayList<>(Arrays.asList("22:30","23:00"));
+        List<String> t1 = new ArrayList<>(Arrays.asList("17:00","17:30","18:00","18:30","22:00"));
+        List<String> t2 = new ArrayList<>(Arrays.asList("17:55","18:25",null,null,null));
+        List<String> t3 = new ArrayList<>(Arrays.asList("17:30","18:20",null,null,null));
+        List<String> t4 = new ArrayList<>(Arrays.asList("17:05","18:00",null,null,null));
+        List<String> t5 = new ArrayList<>(Arrays.asList("22:00","22:30","23:00","23:25",null));
 
         AvailableTransport transport1 = new AvailableTransport("Train","21/11/2021","17:00","22:00","Casablanca","Tanger",t1);
         AvailableTransport transport2 = new AvailableTransport("Train","22/11/2021","17:55","19:00","Casablanca","Rabat",t2);
