@@ -7,6 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Utilisateur {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -27,6 +29,14 @@ public class Utilisateur {
         this.pricemin = pricemin;
         this.pricemax = pricemax;
         this.handicap = handicap;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public int getAge() {
